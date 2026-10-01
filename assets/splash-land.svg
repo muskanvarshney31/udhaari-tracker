@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280">
+  <rect width="1920" height="1280" fill="#123c34"/>
+  <g transform="translate(800 430)"><rect width="320" height="320" rx="75" fill="#fffcf6"/><circle cx="240" cy="80" r="34" fill="#e9ad45"/><path d="M89 81h142v32H89zm0 57h142v32H89zm22 0v56c0 38 22 55 56 55 36 0 59-21 59-57v-54h-36v52c0 19-8 30-23 30-14 0-22-9-22-29v-53z" fill="#123c34"/></g>
+  <text x="960" y="815" fill="#fffcf6" font-family="Arial,sans-serif" font-size="54" font-weight="700" text-anchor="middle">Udhaari</text>
+</svg>

@@ -1,27 +1,42 @@
-# Udhaari Tracker
+# Udhaari
 
-A private, responsive lending tracker that runs entirely in the browser. Add money you need to receive or pay, see the net balance for each person, review the complete history, and download/restore JSON backups.
+Udhaari is a private, offline-first Android and web ledger for personal lending and borrowing. It keeps person-wise balances and a permanent transaction history on the device.
 
-**Live website:** <https://mohddayaaz07.github.io/udhaari-tracker/>
+## What it tracks
 
-## Run locally
+- Money you gave, money you took, repayments received, and repayments made
+- Person-wise amounts to receive or pay
+- Transaction date, optional due date, category, and detailed notes
+- Partial repayments and one-tap full settlement
+- Open overdue balances with oldest-debt-first repayment allocation
+- Search and filters for people and complete history
+- JSON backup/restore and CSV spreadsheet export
+- Automatic migration of records from the original browser version
 
-You can double-click `index.html`, or run a small local server from this folder:
+No account or internet connection is required. Data is stored in the app's private local storage. Uninstalling the app or clearing its data removes the ledger, so make regular JSON backups.
+
+## Run the web app
+
+Open `index.html` directly, or run:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+Then visit <http://localhost:8000>.
 
-## Data and privacy
+## Build and test
 
-Records are stored in the browser's `localStorage`. They remain available on the same browser and device, but do not automatically sync elsewhere. Use **Backup & restore** to download a JSON backup before clearing browser data or changing devices.
+Requirements: Node.js 22, JDK 21, and Android SDK 36.
 
-## Publish
+```bash
+npm install
+npm test
+npm run android:apk
+```
 
-The website is published automatically with GitHub Pages from the `main` branch.
+The debug APK is produced at `android/app/build/outputs/apk/debug/app-debug.apk`.
 
-No build command, package installation, or server is required. Push changes to `main` to update the live website.
+## Privacy
 
-> Important: publishing the site does not publish your ledger entries. Every visitor has a separate empty ledger stored in their own browser.
+Records do not leave the device unless you explicitly share a backup or CSV file. The APK requests no internet, contacts, camera, microphone, location, or storage permission.

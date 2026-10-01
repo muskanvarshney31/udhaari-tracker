@@ -1,0 +1,9 @@
+{
+  "appId": "com.muskanvarshney.udhaari",
+  "appName": "Udhaari",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#f4f1e9",
+    "allowMixedContent": false
+  }
+}
